@@ -5,20 +5,21 @@
     <title>Todos</title>
   </head>
   <body>
+    <h1>Todos</h1>
     <?php
       require_once('includes/task_manager.php');
     ?>
-    <div id="tasks">
+    <ul id="tasks">
       <?php foreach($tasks as $key => $task): ?>
-        <div class="task">
+        <li class="task">
           <div>
             <?php echo $task->get_task_name(); ?>
           </div>
           <div>
             <?php echo  $task->is_completed() ? 'True' : 'False'; ?> 
           </div>
-        </div>
+        </li>
       <?php endforeach; ?>
-    </div>
+    </ul>
   </body>
 </html>
