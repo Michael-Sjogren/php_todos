@@ -9,10 +9,13 @@
       require_once('includes/task_manager.php');
     ?>
     <div id="tasks">
-      <?php foreach($tasks as $key => $val): ?>
+      <?php foreach($tasks as $key => $task): ?>
         <div class="task">
           <div>
-            <?php echo $val; ?>
+            <?php echo $task->get_task_name(); ?>
+          </div>
+          <div>
+            <?php echo  $task->is_completed() ? 'True' : 'False'; ?> 
           </div>
         </div>
       <?php endforeach; ?>

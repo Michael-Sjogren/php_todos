@@ -4,9 +4,9 @@
    */
   class Task
   {
-    private string $TaskName;
-    private bool $TaskCompleted;
-    private int $TaskID;
+    private string $TaskName = "";
+    private bool $TaskCompleted = false;
+    private int $TaskID = 0;
 
     function __construct(string $name, int $id)
     {
