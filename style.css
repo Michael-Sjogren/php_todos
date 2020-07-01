@@ -1,0 +1,52 @@
+:root{
+    --theme_black: #373f51;
+    --theme_blue: #008DD5;
+    --theme_red: #E43F6F;
+    --theme_green: #A2FAA3;
+    --theme_white: #FFFAFF;
+}
+
+
+#main{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+body {
+    margin: 10px;
+    background-color: var(--theme_black);
+    font-family: 'Roboto', sans-serif;
+    
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Roboto', sans-serif;
+    color: var(--theme_white);
+}
+#tasks {
+    display: block;
+    margin: 0 auto;
+    padding: 0;;
+}
+
+#tasks li {
+    color: var(--theme_white);
+    cursor: pointer;
+    text-align: center;
+    max-width: 600px;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: var(--theme_blue);
+    margin: 5px;
+    border: 1px solid var(--theme_black);
+    display: flex;
+}
+
+.task-name{
+    text-align: left;
+}
+.task-completion {
+    color: var(--theme_green);
+    text-align: right;
+}
+.task-name , .task-completion{
+    flex: 1;
+}
