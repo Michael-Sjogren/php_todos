@@ -14,6 +14,4 @@
       array_push($tasks,$t);
     }
   }
-
-  mysqli_close($db_link);
 ?>

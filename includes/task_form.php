@@ -1,10 +1,7 @@
 
 <div id="add-task-form">
-    <?php 
-        echo var_dump($_POST);
-    ?>
-    <form action="" method="POST">
-        <input type="text" name="TaskName" value="" placeholder="The name of the task...">
-        <input type="submit" name="submit" value="Add Task">
+    <form action="includes/new_task.php" method="post">
+        <input type="text" name="task_name" value="" placeholder="The name of the task...">
+        <button>New Task</button>
     </form>
 </div>

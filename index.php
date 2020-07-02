@@ -11,7 +11,7 @@
     <div id="main">
       <h1>Todos</h1>
       <?php
-      require_once('includes/task_manager.php');
+      include_once('includes/task_manager.php');
       ?>
       <?php include_once('includes/task_form.php'); ?>
     <ul id="tasks">
