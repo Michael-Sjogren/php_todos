@@ -4,42 +4,74 @@
     --theme_red: #E43F6F;
     --theme_green: #A2FAA3;
     --theme_white: #FFFAFF;
+    --theme_white_bg: #faebfa;
+
 }
 
+details {
+    padding: 1rem 0;
+}
+
+#new-task-form{
+    text-align: right;
+    margin: 1rem 0;
+}
+input[type="text"] {
+    padding: .5rem;
+}
+input[type="submit"] {
+    font-size: medium;
+    color: var(--theme_white);
+    background-color: var(--theme_blue);
+    border: 1px solid var(--theme_black);
+    padding: .5rem;
+}
 
 #main{
     margin: 0 auto;
     max-width: 1200px;
 }
+
 body {
-    margin: 10px;
-    background-color: var(--theme_black);
+    margin: 1rem;
+    background-color: var(--theme_white_bg);
     font-family: 'Roboto', sans-serif;
     
 }
 h1,h2,h3,h4,h5{
     font-family: 'Roboto', sans-serif;
-    color: var(--theme_white);
+    color: var(--theme_black);
 }
 #tasks {
     display: block;
     margin: 0 auto;
-    padding: 0;;
+    padding: 0;
 }
 
 #tasks li {
-    color: var(--theme_white);
-    cursor: pointer;
+    color: var(--theme_black);
     text-align: center;
-    max-width: 600px;
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: var(--theme_blue);
-    margin: 5px;
+    background-color: var(--theme_white);
+    margin: 5px 0;
     border: 1px solid var(--theme_black);
     display: flex;
 }
 
+#tasks li :hover(){
+    background-color: var(--theme_black);
+    color: var(--theme_white);
+}
+
+.remove-task-btn{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+.remove-task-btn i {
+    color: var(--theme_red);
+}
 .task-name{
     text-align: left;
 }

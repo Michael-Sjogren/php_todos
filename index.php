@@ -10,20 +10,31 @@
   <body>
     <div id="main">
       <h1>Todos</h1>
+      <details>
+        <summary>
+        Create, Edit and delete tasks!
+        </summary>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, error beatae? Atque labore eum explicabo soluta, inventore omnis, maiores sunt eos doloremque excepturi optio accusantium corporis, consectetur ipsam. Minima, quos!
+        </p>
+      </details>
       <?php
-      include_once('includes/database_connect.php');
-      include_once('includes/task_manager.php');
-      $task_manager = new TaskManager($db_link);
+      include_once('classes/task-manager.class.php');
+      $task_manager = new TaskManager();
       ?>
-      <?php include_once('includes/task_form.php'); ?>
+      <?php include_once('includes/new-task-form.php'); ?>
     <ul id="tasks">
-      <?php foreach($task_manager->get_all_tasks() as $key => $task): ?>
-        <li class="task  <?php echo ($task->is_completed() == 1 ? 'green' : '');  ?>">
+      <?php foreach($task_manager->getTasks() as $key => $task): ?>
+        <li class="task  <?php echo ($task->isCompleted() == 1 ? 'green' : '');  ?>">
           <div class="task-name">
-            <?php echo $task->get_task_name(); ?>
+            
+            <?php
+            $task_id = $task->getTaskID();
+            include 'includes/edit-task-name-form.php' 
+            ?>
           </div>
           <div class="task-completion">
-            <i class="fas fa-check"></i>
+            <?php include 'includes/delete-task-form.php'?>
           </div>
         </li>
         <?php endforeach; ?>
