@@ -11,11 +11,13 @@
     <div id="main">
       <h1>Todos</h1>
       <?php
+      include_once('includes/database_connect.php');
       include_once('includes/task_manager.php');
+      $task_manager = new TaskManager($db_link);
       ?>
       <?php include_once('includes/task_form.php'); ?>
     <ul id="tasks">
-      <?php foreach($tasks as $key => $task): ?>
+      <?php foreach($task_manager->get_all_tasks() as $key => $task): ?>
         <li class="task  <?php echo ($task->is_completed() == 1 ? 'green' : '');  ?>">
           <div class="task-name">
             <?php echo $task->get_task_name(); ?>

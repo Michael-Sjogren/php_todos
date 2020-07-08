@@ -1,7 +1,13 @@
+<?php
+    if(isset($_POST['submit'])){
+        $task_name = $_POST['task_name'];
+        $task_manager->create_task($task_name);
+    }
+?>
+<div id="new-task-form">
 
-<div id="add-task-form">
-    <form action="includes/new_task.php" method="post">
-        <input type="text" name="task_name" value="" placeholder="The name of the task...">
-        <button>New Task</button>
+    <form action="" method="post">
+        <input type="text" name="task_name" value="" placeholder="The name of the task..."/>
+        <input type="submit" name="submit" value="submit"/>
     </form>
 </div>
