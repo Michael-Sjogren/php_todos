@@ -67,6 +67,7 @@ h1,h2,h3,h4,h5{
 .remove-task-btn{
     background-color: rgba(0, 0, 0, 0);
     border: none;
+    font-size: large;
     cursor: pointer;
 }
 .remove-task-btn i {
@@ -76,8 +77,10 @@ h1,h2,h3,h4,h5{
     text-align: left;
 }
 .task-completion {
-    color: var(--theme_green);
-    text-align: right;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
 }
 .task-name , .task-completion{
     flex: 1;

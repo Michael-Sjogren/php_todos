@@ -34,6 +34,7 @@
             ?>
           </div>
           <div class="task-completion">
+            <?php include 'includes/complete-task-form.php' ?>
             <?php include 'includes/delete-task-form.php'?>
           </div>
         </li>

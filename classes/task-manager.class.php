@@ -20,12 +20,21 @@
       $sql = "UPDATE Task SET TaskName=?, TaskCompleted=? WHERE TaskID=?";
       $stmt = $this->connect()->prepare($sql);
 
-      $stmt->execute([$task->getTaskName(),(int)$task->isCompleted(),$id]);
+      $stmt->execute(
+        [
+          $task->getTaskName(),
+          (int)$task->isCompleted()
+          ,$id
+        ]
+    );
+
+      header("Location: http://localhost/todos/",true);
     }
     function deleteTask(int $id){
       $sql = "DELETE FROM Task WHERE TaskID=?";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute([$id]);
+      header("Location: http://localhost/todos/",true);
     }
     function getTasks():array{
       $sql = "SELECT * FROM Task";
