@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script src="https://use.fontawesome.com/9cece9b17e.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="https://kit.fontawesome.com/a2bf3fc39e.js" crossorigin="anonymous"></script>
     <title>Todos</title>
   </head>
@@ -19,9 +19,11 @@
         </p>
       </details>
       <?php
-      include_once('classes/task-manager.class.php');
+      include_once 'classes/task-manager.class.php';
+      include_once 'includes/input-sanitizer.php';
       $task_manager = new TaskManager();
       ?>
+      
       <?php include_once('includes/new-task-form.php'); ?>
     <ul id="tasks">
       <?php foreach($task_manager->getTasks() as $key => $task): ?>

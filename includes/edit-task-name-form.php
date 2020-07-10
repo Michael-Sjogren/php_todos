@@ -5,7 +5,7 @@
         //$taskCompleted = $_POST["edit-task-completion-field-{$task_id}"];
 
         if(isset($newName)){
-            $updatedTask = new Task($newName,$task_id);
+            $updatedTask = new Task(sanitize_input($newName),$task_id);
             $updatedTask->setIsCompleted($task->isCompleted());
             $task_manager->updateTask($task_id,$updatedTask);
         }

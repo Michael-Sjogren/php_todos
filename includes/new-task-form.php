@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['submit'])){
         $task_name = $_POST['task_name'];
-        $task_manager->createTask($task_name);
+        $task_manager->createTask(sanitize_input($task_name));
     }
 ?>
 <div id="new-task-form">

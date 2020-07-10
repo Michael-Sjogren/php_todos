@@ -1,6 +1,7 @@
 <?php
   include_once 'dbh.class.php';
   include_once 'task.class.php';
+
   class TaskManager extends Dbh{
     private $tasks = array();
     function __construct(){
@@ -9,6 +10,7 @@
     function createTask(string $taskName){
       $sql = "INSERT INTO Task(TaskName) VALUES(?)";
       $stmt = $this->connect()->prepare($sql);
+
       $stmt->execute([$taskName]);
     }
 
